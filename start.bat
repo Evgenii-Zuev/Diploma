@@ -1,0 +1,1 @@
+1_strip_and_format_string.py > t2.txt && 2_strip_1.py > t3.txt  && 3_extract_data.py > out.txt
