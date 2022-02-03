@@ -4,7 +4,6 @@ import mysql.connector
 import sys
 mycolor=0
 
-#Create the connection object
 myconn = mysql.connector.connect(
       host="localhost",
       user="root",
@@ -14,10 +13,8 @@ myconn = mysql.connector.connect(
 cur = myconn.cursor()
 
 try:
-    #Reading the Employee data
     cur.execute("select * from the_beatles order by collectionName, releaseDate")
 
-    #fetching the rows from the cursor object
     result = cur.fetchall()
     #printing the result
 
@@ -45,10 +42,14 @@ try:
     for x in result:
       if mycolor == 0:
         mycolor=1
-        print('<tr style="background-color:rgb(255, 255, 204);"><td>'+str(x[0])+'</td><td>'+str(x[1])+'</td><td>'+str(x[2])+'</td><td$
+        print('<tr style="background-color:rgb(255, 255, 204);"><td>'+str(x[0])+'</td><td>'+str(x[1])+
+              '</td><td>'+str(x[2])+'</td><td>'+str(x[3])+'</td><td>'+str(x[4])+'</td><td>'+str(x[5])+
+              '</td><td>'+str(x[6])+'</td><td>'+str(x[7])+'</td><td>'+str(x[8])+'</td></tr>');
       else:
         mycolor=0
-        print('<tr style="background-color:rgb(204, 255, 255);"><td>'+str(x[0])+'</td><td>'+str(x[1])+'</td><td>'+str(x[2])+'</td><td$
+        print('<tr style="background-color:rgb(204, 255, 255);"><td>'+str(x[0])+'</td><td>'+str(x[1])+
+              '</td><td>'+str(x[2])+'</td><td>'+str(x[3])+'</td><td>'+str(x[4])+'</td><td>'+str(x[5])+
+              '</td><td>'+str(x[6])+'</td><td>'+str(x[7])+'</td><td>'+str(x[8])+'</td></tr>');
 
     print('</tbody>');
     print('</table>');
