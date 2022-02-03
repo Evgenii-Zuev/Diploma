@@ -24,18 +24,20 @@ try:
     print "Content-type: text/html\n\n"
     print "<html>\n<body>\n"
     print "<div style=\"width: 100%; font-size: 14px; font-weight: bold; text-align: center;\">\n"
-    print( '<table border="1">');
+    print( '<table border="0">');
     print( '<thead>');
-    print( '<tr style="background-color:rgb(0, 204, 255);">');
-    print( '<th>kind</th>');
-    print( '<th>collectionName</th>');
-    print( '<th>trackName</th>');
-    print( '<th>collectionPrice</th>');
-    print( '<th>trackPrice</th>');
-    print( '<th>primaryGenreName</th>');
-    print( '<th>trackCount</th>');
-    print( '<th>trackNumber</th>');
-    print( '<th>releaseDate</th>');
+    print( '<font color="blue">');
+    print( '<tr style="background-color:rgb(128, 128, 0);"</tr>');
+    print( '<th><font color="white">kind</font></th>');
+    print( '<th><font color="white">collectionName</font></th>');
+    print( '<th><font color="white">trackName</font></th>');
+    print( '<th><font color="white">collectionPrice</font></th>');
+    print( '<th><font color="white">trackPrice</font></th>');
+    print( '<th><font color="white">primaryGenreName</font></th>');
+    print( '<th><font color="white">trackCount</font></th>');
+    print( '<th><font color="white">trackNumber</font></th>');
+    print( '<th><font color="white">releaseDate</font></th>');
+    print( '</font>');
     print( '</tr>');
     print( '</thead>');
     print( '<tbody>');
@@ -43,10 +45,10 @@ try:
     for x in result:
       if mycolor == 0:
         mycolor=1
-        print('<tr style="background-color:rgb(255, 255, 204);"><td>'+str(x[0])+'</td><td>'+str(x[1])+'</td><td>'+st$
+        print('<tr style="background-color:rgb(255, 255, 204);"><td>'+str(x[0])+'</td><td>'+str(x[1])+'</td><td>'+str(x[2])+'</td><td$
       else:
         mycolor=0
-        print('<tr style="background-color:rgb(204, 255, 255);"><td>'+str(x[0])+'</td><td>'+str(x[1])+'</td><td>'+st$
+        print('<tr style="background-color:rgb(204, 255, 255);"><td>'+str(x[0])+'</td><td>'+str(x[1])+'</td><td>'+str(x[2])+'</td><td$
 
     print('</tbody>');
     print('</table>');
