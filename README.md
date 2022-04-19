@@ -1,4 +1,8 @@
 # Diploma task
+**You’ll get your Variant of the application individually.**
+
+**Вариант 2. Используя API https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/ получить все данные о "The Beatles" и сохранить их в своей БД: kind, collectionName, trackName, collectionPrice, trackPrice, primaryGenreName, trackCount, trackNumber, releaseDate. Выводите данные по collectionName (задается имя коллекции) в виде таблицы и сортируйте их по releaseDate в порядке возрастания.**
+
 
 Create a simple Web-application (see the description in the “Application” section below), CI/CD infrastructure and pipeline for it.
 Создайте простое Web-приложение (см. описание в разделе "Приложение" ниже), инфраструктуру CI/CD и конвейер для него.
@@ -61,11 +65,6 @@ Database:
 
 \3. It’s better to use cloud native DB solutions like an RDS/AzureSQL/CloudSQL.
 ` `Лучше использовать облачные решения для баз данных, такие как RDS/AzureSQL/CloudSQL.
-
-**You’ll get your Variant of the application individually.**
-
-**Вариант 2. Используя API https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/ получить все данные о "The Beatles" и сохранить их в своей БД: kind, collectionName, trackName, collectionPrice, trackPrice, primaryGenreName, trackCount, trackNumber, releaseDate. Выводите данные по collectionName (задается имя коллекции) в виде таблицы и сортируйте их по releaseDate в порядке возрастания.**
-
 
 
 Напомню, что он имеет статус дипломного задания, которое демонстрирует успешность вашего окончания курса. Настоятельно рекомендуется выполнять его во время обучения (рекомендуемые модули можно найти в общей части). Если вы защитите свой диплом до окончания модулей, это позволит вам быть принятым на работу во время обучения.
