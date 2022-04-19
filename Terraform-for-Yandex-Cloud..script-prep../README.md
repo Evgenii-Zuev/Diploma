@@ -23,4 +23,4 @@
 
 10. Создайте нужные группы безопасности.
 
-Изучите рекомендации по использованию Managed Service for Kubernetes [https://cloud.yandex.ru/docs/managed-kubernetes/concepts/usage-recommendations].
+Изучите рекомендации по использованию [Managed Service for Kubernetes](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/usage-recommendations).
