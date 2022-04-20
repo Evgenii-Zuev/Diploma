@@ -6,7 +6,7 @@
 
 Create a simple Web-application (see the description in the “Application” section below), CI/CD infrastructure and pipeline for it.
 Создайте простое Web-приложение (см. описание в разделе "Приложение" ниже), инфраструктуру CI/CD и конвейер для него.
-# Acceptance Criteria and presentation
+## Acceptance Criteria and presentation
 A short presentation (.ppt or other) which contains description of the solution should be prepared and sent to the commission before a demo session. 
 Короткая презентация (.ppt или другая ), содержащая описание решения, должна быть подготовлена и отправлена в комиссию до демонстрационной сессии.
 
@@ -31,39 +31,39 @@ Detailed requirements/criteria:
 *\* Nice to have – optional*
 
 *\*\* Be careful with the Cloud resource usage and check the costs for not to exceed limits! Switch off your machines when you are not using them!*
-# Application
+## Application
 Develop a simple (lightweight) 3-tire application (front-end, back-end, database).
 ` `Разработайте простое (легкое) приложение с 3 шинами (front-end, back-end, database)
 
-Back-end (collects data) must:
+### Back-end (collects data) must:
 
-\1. Retrieve a portion of data from API (see in your Variant) and store it in a database
+1. Retrieve a portion of data from API (see in your Variant) and store it in a database
 Извлеките часть данных из API (см. в вашем варианте) и сохраните их в базе данных
 
-\2. Update data on demand
+2. Update data on demand
 Обновление данных по запросу
 
-\3. Update DB schema if needed on app’s update
+3. Update DB schema if needed on app’s update
 При необходимости обновите схему БД при обновлении приложения
 
-Front-end (outputs data) must: 
+### Front-end (outputs data) must: 
 Интерфейс (выходные данные) должен
 
-\1. Display any portion of the data stored in the DB
+1. Display any portion of the data stored in the DB
 Отображение любой части данных, хранящихся в БД
 
-\2. Provide a method to trigger data update process
+2. Provide a method to trigger data update process
 Предоставьте метод запуска процесса обновления данных
 
-Database:
+### Database:
 
-\1. Choose Database type and data scheme in a suitable manner. 
+1. Choose Database type and data scheme in a suitable manner. 
 Выберите тип базы данных и схему данных подходящим образом 
 
-\2. Data must be stored in a persistent way
+2. Data must be stored in a persistent way
 Данные должны храниться постоянным образом
 
-\3. It’s better to use cloud native DB solutions like an RDS/AzureSQL/CloudSQL.
+3. It’s better to use cloud native DB solutions like an RDS/AzureSQL/CloudSQL.
 ` `Лучше использовать облачные решения для баз данных, такие как RDS/AzureSQL/CloudSQL.
 
 
