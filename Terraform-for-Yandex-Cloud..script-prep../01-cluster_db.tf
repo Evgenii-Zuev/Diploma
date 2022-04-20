@@ -27,6 +27,7 @@ resource "yandex_mdb_mysql_cluster" "my-mysql" {
   host {
     zone      = var.zone
     subnet_id = yandex_vpc_subnet.mysubnet.id
+    assign_public_ip = true                               # true или false
   }
 }
 
