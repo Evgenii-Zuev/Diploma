@@ -7,8 +7,8 @@ mycolor=0
 myconn = mysql.connector.connect(
       host="localhost",
       user="root",
-      password="GE*5if2n",
-      database="test"
+      password="<***>",
+      database="<***>"
 )
 cur = myconn.cursor()
 
