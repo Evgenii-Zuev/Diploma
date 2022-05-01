@@ -2,8 +2,8 @@ import mysql.connector
 from mysql.connector import MySQLConnection, Error
 import csv
 mydb = mysql.connector.connect(host='localhost',
-    user='root',
-    passwd='GE*5if2n',
+    user='<***>',
+    passwd='<***>',
     db='test')
 cursor = mydb.cursor()
 with open('out.txt') as csv_file:   
