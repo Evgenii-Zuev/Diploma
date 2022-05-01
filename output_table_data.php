@@ -2,8 +2,8 @@
     // определяем начальные данные
     $db_host = 'localhost';
     $db_name = 'test';
-    $db_username = 'root';
-    $db_password = 'GE*5if2n';
+    $db_username = '<***>';
+    $db_password = '<***>';
     #$db_table_to_show = 'the_beatles';
 
     // соединяемся с сервером базы данных
