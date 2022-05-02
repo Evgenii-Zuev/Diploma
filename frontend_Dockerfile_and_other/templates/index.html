@@ -11,15 +11,15 @@
  <thead>
   <font color="blue">
     <tr style="background-color:rgb(128, 128, 0);"</tr>
-		<th><font color="white">kind</font></th>
-		<th><font color="white">collectionName</font></th>
-		<th><font color="white">trackName</font></th>
-		<th><font color="white">collectionPrice</font></th>
-		<th><font color="white">trackPrice</font></th>
-		<th><font color="white">primaryGenreName</font></th>
-		<th><font color="white">trackCount</font></th>
-		<th><font color="white">trackNumber</font></th>
-		<th><font color="white">releaseDate</font></th>
+        <th><font color="white">kind</font></th>
+        <th><font color="white">collectionName</font></th>
+        <th><font color="white">trackName</font></th>
+        <th><font color="white">collectionPrice</font></th>
+        <th><font color="white">trackPrice</font></th>
+        <th><font color="white">primaryGenreName</font></th>
+        <th><font color="white">trackCount</font></th>
+        <th><font color="white">trackNumber</font></th>
+        <th><font color="white">releaseDate</font></th>
     </tr>
    </font>
   </thead>
@@ -37,6 +37,36 @@
     {% endfor %}
   </tbody>
 </table>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('#refresh_button').bind('click', function() {
+          $('#refresh_button').text('Обновление данных.');
+          $('#refresh_button').attr('disabled','disabled');
+
+$.ajax({
+                url: '/update',
+                async: true,
+                type: "get",
+                success: function(data){
+                    alert("Данные обновлены.");
+                   location.reload();
+                }
+            });
+            return false;
+          });
+        });
+</script>
+
+</div>
+<div class="contraiter">
+ <div class="row">
+   <div class="col-12 col-sm-8 mx-auto">
+
+        <button class="btn btn-dark mt-4" id='refresh_button'>Обновить данные</button>
+
+
 </div>
 </body>
 </html>
