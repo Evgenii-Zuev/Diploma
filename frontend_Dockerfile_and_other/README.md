@@ -1,3 +1,7 @@
+# Создание и запуск контейнера
+docker build -t frontend:v1 . && docker run -d -p 80:80 frontend:v1
+# Остановка контейнеров
+docker stop $(docker ps -a -q)
 # Полезные материалы
 Секреты в python:
 - [Разработка вместе с Docker – руководство по использованию Flask и Postgres](https://falbar.ru/article/razrabotka-vmeste-s-docker-rukovodstvo-po-ispolzovaniyu-flask-i-postgres?)
