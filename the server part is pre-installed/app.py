@@ -1,3 +1,4 @@
+import os
 import urllib.request
 link = urllib.request.urlopen('https://itunes.apple.com/search?term=The+Beatles')
 
@@ -8,6 +9,7 @@ link.close()
 
 result = []
 result = lines.split("}")
+file = open(r"out.txt", "w")
 
 substr = ['kind','collectionName', 'trackName', 'collectionPrice', 'trackPrice', 'primaryGenreName', 'trackCount', 'trackNumber', 'releaseDate']
 outt=""
@@ -26,30 +28,34 @@ for text0 in result:
       fl+=1
     i+=1
   if fl>0:
-    print(outt.replace('}\n', '').rstrip(','))
+    file.write(outt.replace('}\n', '').rstrip(',')+'\n')
     fl=0
   outt=""
-#
-# требуется из последнего принта получить массив
-# массив читать, как csv_file и 
-# положить его построчно в БД
-#
+file.close()
+
+from dotenv import load_dotenv
+load_dotenv('.env')
 import mysql.connector
 from mysql.connector import MySQLConnection, Error
 import csv
-mydb = mysql.connector.connect(host='localhost',
-    user='********************************',
-    passwd='**********************************',
-    db='******************test')
+mydb = mysql.connector.connect(host=os.getenv('mysql_host'),
+    user=os.getenv('mysql_user'),
+    passwd=os.getenv('mysql_password'),
+    db=os.getenv('mysql_db'))
+
 cursor = mydb.cursor()
+query = ("DELETE FROM the_beatles")
+cursor.execute(query)
+mydb.commit()
+
 with open('out.txt') as csv_file:   
   csv_reader = csv.reader(csv_file, delimiter=',')
   query = ("INSERT INTO the_beatles "
       "(kind,collectionName,trackName,collectionPrice,trackPrice,primaryGenreName,trackCount,trackNumber,releaseDate) "
       "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)")
   for data in csv_reader:
-######      print(data)
       cursor.execute(query, data)
-############close the connection to the database.
 mydb.commit()
 cursor.close()
+csv_file.close()
+os.remove('out.txt')
