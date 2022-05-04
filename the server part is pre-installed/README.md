@@ -12,3 +12,5 @@
 - sudo python3 -m pip install python-dotenv
 #### Обновление pip python3.9 (CentOS 7)
 /usr/bin/python3 -m pip install --upgrade pip
+#### Получите IP-адрес контейнера Docker
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' 69cb7d5d243a
