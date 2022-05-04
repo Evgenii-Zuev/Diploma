@@ -29,11 +29,11 @@ for text0 in result:
     print(outt.replace('}\n', '').rstrip(','))
     fl=0
   outt=""
-
+#
 # требуется из последнего принта получить массив
 # массив читать, как csv_file и 
 # положить его построчно в БД
-
+#
 import mysql.connector
 from mysql.connector import MySQLConnection, Error
 import csv
