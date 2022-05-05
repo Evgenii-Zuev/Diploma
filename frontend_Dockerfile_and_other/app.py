@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-#metrics = PrometheusMetrics(app)
+metrics = PrometheusMetrics(app)
 load_dotenv('.env')
 
 def connection():

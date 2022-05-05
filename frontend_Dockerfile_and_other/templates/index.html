@@ -6,7 +6,36 @@
   </head>
 <body>
 
-<div style=\"width: 100%; font-size: 14px; font-weight: bold; text-align: center;\">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('#refresh_button').bind('click', function() {
+          $('#refresh_button').text('Обновление данных.');
+          $('#refresh_button').attr('disabled','disabled');
+
+$.ajax({
+                url: 'http://192.168.1.56',
+                async: true,
+                type: "get",
+                success: function(data){
+                    alert("Данные обновлены.");
+                   location.reload();
+                }
+            });
+            return false;
+          });
+        });
+</script>
+
+</div>
+<div class="contraiter">
+ <div class="row">
+   <div class="col-12 col-sm-8 mx-auto">
+
+        <button class="btn btn-dark mt-4" id='refresh_button'>Обновить данные</button>
+
+
+<!-- div style=\"width: 100%; font-size: 14px; font-weight: bold; text-align: center;\"-->
 <table border="0">
  <thead>
   <font color="blue">
@@ -37,36 +66,8 @@
     {% endfor %}
   </tbody>
 </table>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type=text/javascript>
-        $(function() {
-          $('#refresh_button').bind('click', function() {
-          $('#refresh_button').text('Обновление данных.');
-          $('#refresh_button').attr('disabled','disabled');
-
-$.ajax({
-                url: '/update',
-                async: true,
-                type: "get",
-                success: function(data){
-                    alert("Данные обновлены.");
-                   location.reload();
-                }
-            });
-            return false;
-          });
-        });
-</script>
-
-</div>
-<div class="contraiter">
- <div class="row">
-   <div class="col-12 col-sm-8 mx-auto">
-
-        <button class="btn btn-dark mt-4" id='refresh_button'>Обновить данные</button>
-
-
+  </div>
+ </div>
 </div>
 </body>
 </html>
