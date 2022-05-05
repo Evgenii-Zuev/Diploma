@@ -6,6 +6,7 @@
 - [Requests Python библиотека для отправки HTTP-запросов (очень краткое руководство)](https://www.awesomeandrew.ru/2020/04/23/requests-python-%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8-http-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2/?)
 - [Делаем запросы к API с помощью Python](https://pythonist.ru/delaem-zaprosy-k-api-s-pomoshhyu-python/?ysclid=l2rrnwmvlb)
 - [Введение в работу с библиотекой Requests в Python](https://www.digitalocean.com/community/tutorials/how-to-get-started-with-the-requests-library-in-python-ru)
+- [Примеры отправки AJAX JQuery](https://snipp.ru/jquery/ajax-jquery?#link-dozhdatsya-vypolneniya-ajax-zaprosa)
 ### Возможно, не пригодится. Но, чтоб не искать.
 - [Как установить requests на Python – для Windows, Linux, Mac](https://programbox.ru/2021/12/11/%D0%BA%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-requests-%D0%BD%D0%B0-python-%D0%B4%D0%BB%D1%8F-windows-linux-mac/)
 - [Установка Python 3.9 на CentOS 8 / CentOS 7](https://infoit.com.ua/linux/ustanovka-python-3-9-na-centos-8-centos-7/)
