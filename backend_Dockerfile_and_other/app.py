@@ -6,11 +6,17 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from prometheus_flask_exporter import PrometheusMetrics
 import os
+from dotenv import load_dotenv
+
+app = Flask(__name__)
+
+metrics = PrometheusMetrics(app)
+load_dotenv('.env')
 
 def refresh():
    import urllib.request
    link = urllib.request.urlopen('https://itunes.apple.com/search?term=The+Beatles')
-
+#   link = requests.get('https://itunes.apple.com/search?term=The+Beatles')
    lines = ""
    for line in link.readlines():
      lines = lines + str(line)
@@ -69,7 +75,7 @@ def refresh():
    csv_file.close()
    os.remove('out.txt')
 
-@app.route('/refresh', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_tasks():
     refresh()
     return "ok"
