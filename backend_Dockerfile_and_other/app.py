@@ -1,4 +1,4 @@
-import requests
+#import requests
 #from datetime import datetime, timedelta
 from flask import Flask
 from flask_cors import CORS
