@@ -14,13 +14,17 @@
           $('#refresh_button').attr('disabled','disabled');
 
 $.ajax({
-                url: 'http://192.168.1.56',
+                url: 'http://192.168.1.56:5000/',
                 async: true,
                 type: "get",
                 success: function(data){
-                    alert("Данные обновлены.");
+                   alert("Данные обновлены.");
                    location.reload();
-                }
+                },
+                error: function(data){
+                   alert("Данные обновлены.");
+                   location.reload();
+		}
             });
             return false;
           });
@@ -33,7 +37,6 @@ $.ajax({
    <div class="col-12 col-sm-8 mx-auto">
 
         <button class="btn btn-dark mt-4" id='refresh_button'>Обновить данные</button>
-
 
 <!-- div style=\"width: 100%; font-size: 14px; font-weight: bold; text-align: center;\"-->
 <table border="0">
