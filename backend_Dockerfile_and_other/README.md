@@ -8,7 +8,7 @@
 - [Введение в работу с библиотекой Requests в Python](https://www.digitalocean.com/community/tutorials/how-to-get-started-with-the-requests-library-in-p$
 - [Примеры отправки AJAX JQuery](https://snipp.ru/jquery/ajax-jquery?#link-dozhdatsya-vypolneniya-ajax-zaprosa)
 ### Возможно, не пригодится. Но, чтоб не искать.
-- [Как установить requests на Python – для Windows, Linux, Mac](https://programbox.ru/2021/12/11/%D0%BA%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE$
+- [Как установить requests на Python – для Windows, Linux, Mac](https://programbox.ru/2021/12/11/%D0%BA%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE$)
 - [Установка Python 3.9 на CentOS 8 / CentOS 7](https://infoit.com.ua/linux/ustanovka-python-3-9-na-centos-8-centos-7/)
 - [Чтение веб-страницы с помощью Python](http://mindhalls.ru/web-page-read-python/)
 #### Установка модулей python3.9
