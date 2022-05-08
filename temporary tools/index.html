@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Beatles from iTunes</title>
+  </head>
+<body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('#refresh_button').bind('click', function() {
+          $('#refresh_button').text('Обновление данных.');
+          $('#refresh_button').attr('disabled','disabled');
+
+$.ajax({
+                url: 'http://192.168.1.56:5000/',
+                async: true,
+                type: "get",
+                complete: function(data){
+                   location.reload();
+                }
+            });
+            return false;
+          });
+        });
+</script>
+
+</div>
+<div class="contraiter">
+ <div class="row">
+   <div class="col-12 col-sm-8 mx-auto">
+
+        <button class="btn btn-dark mt-4" id='refresh_button'>Обновить данные</button>
+
+<!-- div style=\"width: 100%; font-size: 14px; font-weight: bold; text-align: center;\"-->
+<table border="0">
+ <thead>
+  <font color="blue">
+    <tr style="background-color:rgb(128, 128, 0);"</tr>
+        <th><font color="white">kind</font></th>
+        <th><font color="white">collectionName</font></th>
+        <th><font color="white">trackName</font></th>
+        <th><font color="white">collectionPrice</font></th>
+        <th><font color="white">trackPrice</font></th>
+        <th><font color="white">primaryGenreName</font></th>
+        <th><font color="white">trackCount</font></th>
+        <th><font color="white">trackNumber</font></th>
+        <th><font color="white">releaseDate</font></th>
+    </tr>
+   </font>
+  </thead>
+  <tbody>  
+    {% for row in data %}
+        {% if loop.index % 2 == 0 %}
+           <tr style="background-color:rgb(255, 255, 214);">
+        {% else %}
+           <tr style="background-color:rgb(204, 255, 255);">
+        {% endif %}
+          {% for d in row %}
+              <td>{{ d }}</td>
+          {% endfor %}
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  </div>
+ </div>
+</div>
+</body>
+</html>
