@@ -11,3 +11,12 @@ docker stop $(docker ps -a -q)
 - [см. Обработка ошибок (мне помогло)](https://professorweb.ru/my/javascript/jquery/level3/3_5.php?)
 #### 7. Adding a favicon
 https://tedboy.github.io/flask/patterns/favicon.html
+#### Установка модулей python3.9
+- sudo python3 -m pip install mysql-connector-python
+- sudo python3 -m pip install python-dotenv
+#### Обновление pip python3.9 (CentOS 7)
+/usr/bin/python3 -m pip install --upgrade pip
+#### Получите IP-адрес контейнера Docker
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' 69cb7d5d243a
+
+
