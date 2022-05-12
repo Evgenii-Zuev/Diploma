@@ -8,7 +8,8 @@ docker stop $(docker ps -a -q)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 - [Переменные окружения для Python проектов](https://habr.com/ru/post/472674/)
 - [Безопасная работа с секретами при сборке в Docker Compose](https://habr.com/ru/company/otus/blog/501580/?)
-- [см. Обработка ошибок (мне помогло)](https://professorweb.ru/my/javascript/jquery/level3/3_5.php?)
+- [см. Обработка ошибок (AJAX)](https://professorweb.ru/my/javascript/jquery/level3/3_5.php?)
+- [Использование Ajax (Параметры событий Ajax)](https://professorweb.ru/my/javascript/jquery/level3/3_5.php?)
 - [.bind Прикрепляет обработчик к событию.](https://ruseller.com/jquery?id=125)
 
 #### 7. Adding a favicon
