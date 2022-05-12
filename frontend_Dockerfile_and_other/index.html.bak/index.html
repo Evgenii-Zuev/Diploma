@@ -13,13 +13,18 @@
           $('#refresh_button').text('Обновление данных.');
           $('#refresh_button').attr('disabled','disabled');
 
-$.ajax({
+        $.ajax({
                 url: 'http://192.168.1.56:5000/',
                 async: true,
                 type: "get",
-                complete: function(data){
+                success: function(data){
+                   alert("Данные обновлены.");
                    location.reload();
-                }
+                },
+                error: function(data){
+                   alert("Данные обновлены.");
+                   location.reload();
+		}
             });
             return false;
           });
