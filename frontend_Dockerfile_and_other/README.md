@@ -3,6 +3,7 @@ docker build -t frontend:v1 . && docker run -d -p 80:80 frontend:v1
 ### Остановка контейнеров
 docker stop $(docker ps -a -q)
 ### Полезные материалы
+- [Взаимодействие Docker контейнеров](https://dotsandbrackets.com/communication-between-docker-containers-ru/)
 ##### Секреты в python:
 - [Разработка вместе с Docker – руководство по использованию Flask и Postgres](https://falbar.ru/article/razrabotka-vmeste-s-docker-rukovodstvo-po-ispolzovaniyu-flask-i-postgres?)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
