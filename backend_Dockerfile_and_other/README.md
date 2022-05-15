@@ -1,4 +1,4 @@
-# Полезные ссылки по доработке
+### Полезные ссылки по доработке
 - [Чтение веб-страницы с помощью Python](http://mindhalls.ru/web-page-read-python/)
 - [Конвертация типов данных](https://pythonru.com/uroki/python-dlja-nachinajushhih/konvertacija-tipov-dannyh?)
 - [Как связать бэкенд (python, flask) с фронтендом (html, css, javascript)](https://reddeveloper.ru/questions/kak-svyazat-b-ekend-python-flask-s-frontendom-html-css-javascript-oaY7X?ysclid=l2ooips4f9)
