@@ -13,9 +13,9 @@
 - Подготавливаем виртуалки для установки кластера при помощи ansible
 
          ---
-- name: Preparation
-  hosts: k8s_cluster
-  become: yes
+         - name: Preparation
+         -   hosts: k8s_cluster
+         -     become: yes
 
   tasks:
   - name: Install packages
