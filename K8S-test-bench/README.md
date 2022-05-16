@@ -45,37 +45,37 @@
                   enabled: yes
 
               - name: Enable network service
-                  service:
+                service:
                   name: network
                   state: started
                   enabled: yes
 
               - name: Disable firewalld
-                  service:
+                service:
                   name: firewalld
                   state: stopped
                   enabled: no
 
               - name: Check is swap enable
-                  shell: swapon
-                  register: swap_present
-                  changed_when: false
-                  ignore_errors: true
+                shell: swapon
+                register: swap_present
+                changed_when: false
+                ignore_errors: true
 
               - name: If swap is enabled - disable it
-                  shell: swapoff -a
-                  when: swap_present.stdout != ""
+                shell: swapoff -a
+                when: swap_present.stdout != ""
 
               - name: Disable SWAP in fstab
-                  replace:
-                    path: /etc/fstab
-                    regexp: '^([^#].*\s*swap\s*.*)$'
-                    replace: '# \1'
+                replace:
+                  path: /etc/fstab
+                  regexp: '^([^#].*\s*swap\s*.*)$'
+                  replace: '# \1'
 
               - name: Check Disable SELinux
-                  selinux:
-                    state: disabled
-                  register: selinux_ret
+                selinux:
+                  state: disabled
+                register: selinux_ret
 
               - name: Disable SELinux
                 shell: setenforce 0
