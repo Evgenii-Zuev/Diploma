@@ -72,13 +72,13 @@
                     regexp: '^([^#].*\s*swap\s*.*)$'
                     replace: '# \1'
 
-  - name: Check Disable SELinux
-    selinux:
-      state: disabled
-    register: selinux_ret
+              - name: Check Disable SELinux
+                  selinux:
+                    state: disabled
+                  register: selinux_ret
 
-  - name: Disable SELinux
-    shell: setenforce 0
-    when: selinux_ret.reboot_required
+              - name: Disable SELinux
+                shell: setenforce 0
+                when: selinux_ret.reboot_required
 
 - Подготавливаем Kubespray
