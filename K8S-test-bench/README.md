@@ -9,5 +9,6 @@
     ssh-copy-id worker1
     ssh-copy-id worker2
     ssh-copy-id worker3
+    
 - Подготавливаем виртуалки для установки кластера при помощи ansible
 - Подготавливаем Kubespray
