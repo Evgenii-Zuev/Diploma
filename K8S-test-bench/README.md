@@ -14,12 +14,12 @@
 
          ---
          - name: Preparation
-         -   hosts: k8s_cluster
-         -     become: yes
-
-  tasks:
-  - name: Install packages
-    yum:
+             hosts: k8s_cluster
+               become: yes
+               
+               tasks:
+               - name: Install packages
+                 yum:
       name:
         - net-tools
 #        - mc
