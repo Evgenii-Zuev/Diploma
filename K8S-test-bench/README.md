@@ -32,45 +32,45 @@
                      - rsyslog
                   state: latest
 
-  - name: Disable NetworkManager
-    service:
-      name: NetworkManager
-      state: stopped
-      enabled: no
+              - name: Disable NetworkManager
+                service:
+                  name: NetworkManager
+                  state: stopped
+                  enabled: no
 
-  - name: Enable rsyslog
-    service:
-      name: rsyslog
-      state: started
-      enabled: yes
+              - name: Enable rsyslog
+                service:
+                  name: rsyslog
+                  state: started
+                  enabled: yes
 
-  - name: Enable network service
-    service:
-      name: network
-      state: started
-      enabled: yes
+              - name: Enable network service
+                  service:
+                  name: network
+                  state: started
+                  enabled: yes
 
-  - name: Disable firewalld
-    service:
-      name: firewalld
-      state: stopped
-      enabled: no
+              - name: Disable firewalld
+                  service:
+                  name: firewalld
+                  state: stopped
+                  enabled: no
 
-  - name: Check is swap enable
-    shell: swapon
-    register: swap_present
-    changed_when: false
-    ignore_errors: true
+              - name: Check is swap enable
+                  shell: swapon
+                  register: swap_present
+                  changed_when: false
+                  ignore_errors: true
 
-  - name: If swap is enabled - disable it
-    shell: swapoff -a
-    when: swap_present.stdout != ""
+              - name: If swap is enabled - disable it
+                  shell: swapoff -a
+                  when: swap_present.stdout != ""
 
-  - name: Disable SWAP in fstab
-    replace:
-      path: /etc/fstab
-      regexp: '^([^#].*\s*swap\s*.*)$'
-      replace: '# \1'
+              - name: Disable SWAP in fstab
+                  replace:
+                    path: /etc/fstab
+                    regexp: '^([^#].*\s*swap\s*.*)$'
+                    replace: '# \1'
 
   - name: Check Disable SELinux
     selinux:
