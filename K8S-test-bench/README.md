@@ -20,17 +20,17 @@
                tasks:
                - name: Install packages
                  yum:
-      name:
-        - net-tools
-#        - mc
-#        - vim
-        - git
-        - bash-completion
-        - nfs-utils
-        - python3
-        - tar
-        - rsyslog
-      state: latest
+                   name:
+                     - net-tools
+                  #  - mc
+                  #  - vim
+                     - git
+                     - bash-completion
+                     - nfs-utils
+                     - python3
+                     - tar
+                     - rsyslog
+                  state: latest
 
   - name: Disable NetworkManager
     service:
