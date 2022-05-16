@@ -5,10 +5,10 @@
 - Настраиваем подключение с "установщика" ко всем остальным по SSH
 
          ssh-keygen
-         ssh-copy-id control1
-         ssh-copy-id worker1
-         ssh-copy-id worker2
-         ssh-copy-id worker3
+         ssh-copy-id control1.test-stand.local
+         ssh-copy-id worker1.test-stand.local
+         ssh-copy-id worker2.test-stand.local
+         ssh-copy-id worker3.test-stand.local
     
 - Подготавливаем виртуалки для установки кластера при помощи ansible
 
