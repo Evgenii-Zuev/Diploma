@@ -85,6 +85,7 @@
                 shell: setenforce 0
                 when: selinux_ret.reboot_required
 
+---
 - Подготавливаем Kubespray (клонируем репозиторий. создаём inventory для ansible)
 ```
 git clone https://github.com/kubernetes-sigs/kubespray
@@ -92,13 +93,13 @@ cd kubespray/inventory
 cp sample cluster
 cd cluster
 ```
--- Мой inventory
+- Мой inventory
 ```
 [all]
-control1.test-stand.local ansible_host=192.168.218.171
-worker1.test-stand.local ansible_host=192.168.218.174
-worker2.test-stand.local ansible_host=192.168.218.175
-worker3.test-stand.local ansible_host=192.168.218.176
+control1.test-stand.local ansible_host=192.168.1.101
+worker1.test-stand.local ansible_host=192.168.1.102
+worker2.test-stand.local ansible_host=192.168.1.103
+worker3.test-stand.local ansible_host=192.168.1.104
 
 [kube-master]
 control1.test-stand.local
