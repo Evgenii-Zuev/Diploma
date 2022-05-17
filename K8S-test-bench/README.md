@@ -48,7 +48,7 @@ k8s_workers
   - name: Ping my servers
     ping:
 ```
-- Подготавливаем виртуалки для установки кластера при помощи ansible
+- Подготовка виртуалок для установки кластера при помощи ansible
 
          ---
          - name: Preparation
@@ -120,7 +120,7 @@ k8s_workers
                 when: selinux_ret.reboot_required
 
 ---
-### Подготавливаем Kubespray (клонируем репозиторий. создаём inventory для ansible)
+### Подготавливаем Kubespray (клонирование репозитория. создание inventory для ansible)
 ```
 git clone https://github.com/kubernetes-sigs/kubespray
 cd kubespray/inventory
