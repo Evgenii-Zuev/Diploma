@@ -85,4 +85,10 @@
                 shell: setenforce 0
                 when: selinux_ret.reboot_required
 
-- Подготавливаем Kubespray
+- Подготавливаем Kubespray (клонируем репозиторий. создаём inventory для ansible)
+```
+git clone https://github.com/kubernetes-sigs/kubespray
+cd kubespray/inventory
+cp sample cluster
+cd cluster
+```
