@@ -153,7 +153,7 @@ calico-rr
 ```
 - Параметры установки кластера K8S в файлах в директории group_vars
 
-         1.Файл ***group_vars/k8s-cluster/k8s-cluster.yml***
+         1.Файл group_vars/k8s-cluster/k8s-cluster.yml
 
 | Параметр   | Значение  |   Описание   |
 |:--------|:------------|:-------------|
@@ -173,13 +173,13 @@ calico-rr
 |system_cpu_reserved|500m|зарезервированное за Linux системой (приложениями) время процессора|
 |force_certificate_regeneration| true|Автоматический перевыпуск сертификатов для кубернетес control plane (без необходимости увеличения версии кластера)|
 
-         2.Файл ***group_vars/k8s-cluster/k8s-net-calico.yml***
+         2.Файл group_vars/k8s-cluster/k8s-net-calico.yml
          
 | Параметр   | Значение  |   Описание   |
 |:--------|:------------|:-------------|
 |calico_ipip_mode| ‘CrossSubnet’|условия использования IP in IP режима|
 
-         3.Файл ***group_vars/all/all.yml***
+         3.Файл group_vars/all/all.yml
          
 | Параметр   | Значение  |   Описание   |
 |:--------|:------------|:-------------|
