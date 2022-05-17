@@ -165,3 +165,10 @@ calico-rr
 |kube_apiserver_port|6443|Порт API сервера кластера|
 |kube_proxy_mode| ipvs|режим iptables не ставим|
 |cluster_name|cluster.local|имя кластера (используется в качестве корневого домена во внутреннем DNS сервере)|
+|enable_nodelocaldns|true|включаем кеширующие DNS сервера на каждой ноде кластера|
+|nodelocaldns_ip|169.254.25.10|IP адрес кешируюшего DNS сервера на ноде|
+|container_manager|containerd|определяем систему контейнеризации|
+|k8s_image_pull_policy|IfNotPresent|политика загрузки образов системных контейнеров кластера|
+|system_memory_reserved|512Mi|зарезервированная за Linux системой (приложениями) память|
+|system_cpu_reserved|500m|зарезервированное за Linux системой (приложениями) время процессора|
+|force_certificate_regeneration| true|Автоматический перевыпуск сертификатов для кубернетес control plane (без необходимости увеличения версии кластера)|
