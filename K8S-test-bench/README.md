@@ -92,3 +92,29 @@ cd kubespray/inventory
 cp sample cluster
 cd cluster
 ```
+-- Мой inventory
+```
+[all]
+control1.test-stand.local ansible_host=192.168.218.171
+worker1.test-stand.local ansible_host=192.168.218.174
+worker2.test-stand.local ansible_host=192.168.218.175
+worker3.test-stand.local ansible_host=192.168.218.176
+
+[kube-master]
+control1.test-stand.local
+
+[etcd]
+control1.test-stand.local
+
+[kube-node]
+worker1.test-stand.local
+worker2.test-stand.local
+worker3.test-stand.local
+
+[calico-rr]
+
+[k8s-cluster:children]
+kube-master
+kube-node
+calico-rr
+```
