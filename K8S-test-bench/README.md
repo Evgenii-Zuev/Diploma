@@ -14,7 +14,7 @@
          ssh-copy-id worker3.test-stand.local
          
 - Проверка хостов для доступа ansible
-1. Hosts.txt
+1. **Hosts.txt**
 ```
 [k8s_1st_master]
 control1.test-stand.local ansible_host=192.168.1.101
@@ -35,7 +35,7 @@ k8s_controls
 k8s_workers
 
 ```
-2. Playbook
+2. **Playbook**
 ```
 ---
 - name: Test playbook
@@ -125,7 +125,7 @@ cd kubespray/inventory
 cp sample cluster
 cd cluster
 ```
-- Мой в директории cluster inventory.ini
+- Мой **inventory.ini** в директории cluster 
 ```
 [all]
 control1.test-stand.local ansible_host=192.168.1.101
