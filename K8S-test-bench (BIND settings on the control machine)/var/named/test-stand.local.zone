@@ -1,0 +1,17 @@
+$TTL 86400
+@ IN SOA master.test-stand.local. eugene.zuev.home. (
+                                            2022051600 ;Serial
+                                            3600 ;Refresh
+                                            1800 ;Retry
+                                            604800 ;Expire
+                                            86400 ;Minimum TTL
+)
+
+@ IN NS master
+
+master          IN      A       192.168.1.56
+control1        IN      A       192.168.1.101
+
+worker1         IN      A       192.168.1.102
+worker2         IN      A       192.168.1.103
+worker3         IN      A       192.168.1.104

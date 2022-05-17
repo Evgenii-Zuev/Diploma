@@ -1,0 +1,17 @@
+$TTL 86400
+@ IN SOA master.test-stand.local. eugene.zuev.home. (
+                                            2022051600 ;Serial
+                                            3600 ;Refresh
+                                            1800 ;Retry
+                                            604800 ;Expire
+                                            86400 ;Minimum TTL
+)
+@ IN NS master.test-stand.local.
+
+56      IN      PTR     master.test-stand.local.
+
+101     IN      PTR     control1.test-stand.local.
+
+102     IN      PTR     worker1.test-stand.local.
+103     IN      PTR     worker2.test-stand.local.
+104     IN      PTR     worker3.test-stand.local.
