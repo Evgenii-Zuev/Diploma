@@ -12,7 +12,8 @@
          ssh-copy-id worker1.test-stand.local
          ssh-copy-id worker2.test-stand.local
          ssh-copy-id worker3.test-stand.local
-         
+
+---
 - Проверка хостов для доступа ansible
 1. **Hosts.txt**
 ```
