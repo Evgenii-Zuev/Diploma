@@ -186,3 +186,9 @@ calico-rr
 |etcd_kubeadm_enabled|true|установкa и etcd средствами kubeadm|
 |loadbalancer_apiserver_type|nginx|значение по умолчанию. Доступ к k8s API через loopback интерфейс ноды кластера|
 
+
+- В корне kubespray запустить установку кластера (в системе должны быть установлены интерпретатор python и pip).
+```
+pip install -r requirements.txt
+ansible-playbook -i inventory/cluster/inventory.ini cluster.yml
+```
