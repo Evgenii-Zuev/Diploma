@@ -1,11 +1,10 @@
-- сохранить настройки BIND
 - сохранить конфиги ansible проверки хостов и установки ПО
 - [Безопасное хранение secrets в Kubernetes](https://habr.com/ru/company/southbridge/blog/658123/)
 ### Создание тестового стенда для развертывания кластера k8s
 
 - Готовим 5 виртуальных машин (1 - "установщик", 1 - "мастер" с etcd, и 3 - "воркера"). Это не совсем правильно, но для тестового кластера должно хватить.
 - Настраиваем BIND на "установщике".
-- [K8S-test bench (BIND settings)]()
+- [K8S-test bench (BIND settings)](https://github.com/Evgenii-Zuev/Diploma-preparation/tree/main/K8S-test-bench%20(BIND%20settings%20on%20the%20control%20machine)
 
 - Настраиваем подключение с "установщика" ко всем остальным по SSH
 
@@ -14,7 +13,40 @@
          ssh-copy-id worker1.test-stand.local
          ssh-copy-id worker2.test-stand.local
          ssh-copy-id worker3.test-stand.local
-    
+         
+- Проверка хостов для доступа ansible
+1. Hosts.txt
+```
+[k8s_1st_master]
+control1.test-stand.local ansible_host=192.168.1.101
+
+[k8s_other_masters]
+
+[k8s_controls:children]
+k8s_1st_master
+k8s_other_masters
+
+[k8s_workers]
+worker1.test-stand.local  ansible_host=192.168.1.102
+worker2.test-stand.local  ansible_host=192.168.1.103
+worker3.test-stand.local  ansible_host=192.168.1.104
+
+[k8s_cluster:children]
+k8s_controls
+k8s_workers
+
+```
+2. Playbook
+```
+---
+- name: Test playbook
+  hosts: k8s_cluster
+  become: yes
+
+  tasks:
+  - name: Ping my servers
+    ping:
+```
 - Подготавливаем виртуалки для установки кластера при помощи ansible
 
          ---
