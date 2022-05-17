@@ -3,8 +3,7 @@
 ## Создание тестового стенда для развертывания кластера k8s
 
 - Готовим 5 виртуальных машин (1 - "установщик", 1 - "мастер" с etcd, и 3 - "воркера"). Это не совсем правильно, но для тестового кластера должно хватить.
-- Настраиваем BIND на "установщике".
-- [K8S-test bench (BIND settings)](https://github.com/Evgenii-Zuev/Diploma-preparation/tree/main/K8S-test-bench%20(BIND%20settings%20on%20the%20control%20machine)
+- Настраиваем BIND на "установщике" [K8S-test-bench (BIND settings)](https://github.com/Evgenii-Zuev/Diploma-preparation/tree/main/K8S-test-bench%20(BIND%20settings%20on%20the%20control%20machine))
 
 - Настраиваем подключение с "установщика" ко всем остальным по SSH
 
@@ -152,3 +151,4 @@ kube-master
 kube-node
 calico-rr
 ```
+- Параметры установки кластера K8S в файлах в директории group_vars
