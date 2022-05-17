@@ -159,3 +159,9 @@ calico-rr
 |:--------|:------------|:-------------|
 | kube_version1 |  v1.20.2 | версию кластера кубернетес |
 | kube_network_plugin|calico|драйвер сети кластера|
+|kube_service_addresses|10.233.0.0/18|диапазон адресов для сервисов кластера|
+|kube_pods_subnet|10.233.64.0/18|диапазон адресов для подов кластера|
+|kube_network_node_prefix|24|размер подсети подов на ноде кластера|
+|kube_apiserver_port|6443|Порт API сервера кластера|
+|kube_proxy_mode| ipvs|режим iptables не ставим|
+|cluster_name|cluster.local|имя кластера (используется в качестве корневого домена во внутреннем DNS сервере)|
