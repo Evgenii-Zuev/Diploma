@@ -15,7 +15,7 @@
          ssh-copy-id worker3.test-stand.local
 
 ---
-- Проверка хостов для доступа ansible
+### Проверка хостов для доступа ansible
 1. **Hosts.txt**
 ```
 [k8s_1st_master]
@@ -120,7 +120,7 @@ k8s_workers
                 when: selinux_ret.reboot_required
 
 ---
-- Подготавливаем Kubespray (клонируем репозиторий. создаём inventory для ansible)
+### Подготавливаем Kubespray (клонируем репозиторий. создаём inventory для ansible)
 ```
 git clone https://github.com/kubernetes-sigs/kubespray
 cd kubespray/inventory
@@ -189,6 +189,7 @@ calico-rr
 |loadbalancer_apiserver_type|nginx|значение по умолчанию. Доступ к k8s API через loopback интерфейс ноды кластера|
 
 ---
+### Установка кластера K8S
 - В корне kubespray запустить установку кластера (в системе должны быть установлены интерпретатор python и pip).
 ```
 pip install -r requirements.txt
