@@ -125,7 +125,7 @@ k8s_workers
 ```
 git clone https://github.com/kubernetes-sigs/kubespray.git
 cd kubespray/inventory
-cp sample cluster
+cp -a sample cluster
 cd cluster
 ```
 - Мой **inventory.ini** в директории cluster 
