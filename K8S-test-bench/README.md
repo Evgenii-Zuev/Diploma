@@ -121,9 +121,9 @@ k8s_workers
                 when: selinux_ret.reboot_required
 
 ---
-### Подготавливаем Kubespray (клонирование репозитория. создание inventory для ansible)
+### Подготовка Kubespray (клонирование репозитория. создание inventory для ansible)
 ```
-git clone https://github.com/kubernetes-sigs/kubespray
+git clone https://github.com/kubernetes-sigs/kubespray.git
 cd kubespray/inventory
 cp sample cluster
 cd cluster
