@@ -186,7 +186,7 @@ calico-rr
          
 | Параметр   | Значение  |   Описание   |
 |:--------|:------------|:-------------|
-|etcd_kubeadm_enabled|true|установкa и etcd средствами kubeadm|
+|etcd_kubeadm_enabled|true|в версии 1.23.6 удалён параметр "установкa и etcd средствами kubeadm"|
 |loadbalancer_apiserver_type|nginx|значение по умолчанию. Доступ к k8s API через loopback интерфейс ноды кластера|
 
 ---
