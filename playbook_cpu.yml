@@ -1,0 +1,35 @@
+---
+- name: Set instances depends from Processor modification
+  hosts: all
+  become: yes
+
+  vars:
+    target_file: /config_for_instances/config.cfg
+
+  tasks:
+  - name: Update/create block if needed. Create file if not exists
+    blockinfile:
+      path: "{{ target_file }}"
+      block: |
+        instances=0
+      create: true
+  - name: Check Processor Model
+    lineinfile:
+      path: "{{ target_file }}"
+      backrefs: yes
+      regexp: '^(instances=)(.*)$'
+      line: 'instances={{ item.groups }}'
+      state: present
+    when: ansible_processor[2] == item.name
+    loop:
+      - { name: "Intel Atom C3558", groups: "10" }
+      - { name: "Intel Celeron J5005", groups: "20" }
+      - { name: "Intel Core i3 10100", groups: "30" }
+      - { name: "Intel Core i5 10500", groups: "40" }
+      - { name: "Intel Core i7 10700", groups: "50" }
+      - { name: "Intel Core i9 10900", groups: "60" }
+      - { name: "Intel Xeon Silver 4216", groups: "70" }
+      - { name: "Intel Xeon Gold 6154", groups: "80" }
+      - { name: "AMD EPYC 7502", groups: "90" }
+      - { name: "AMD EPYC 7742", groups: "100" }
+      - { name: "Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz", groups: "36" }
